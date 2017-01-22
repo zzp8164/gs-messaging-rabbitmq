@@ -51,7 +51,7 @@ public class Application {
     }
 
     /**
-     * docker run -d --name rabbit-mq -p 15672:15672 -p 5672:5672 rabbitmq:management
+     * docker run -d --name rabbit-mq --restart=always -p 15672:15672 -p 5672:5672 rabbitmq:management
      */
     public static void main(String[] args) throws InterruptedException {
         SpringApplication.run(Application.class, args);
